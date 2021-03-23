@@ -1,0 +1,54 @@
+*
+* NGSPICE simulation script
+* T1
+*
+
+* forces current values to be saved
+.options savecurrents
+
+
+
+* independent voltage source
+Va n1 GND dc 5.01015797903
+
+* dependent voltage source and voltage source necessary to define it
+VO GND n6a dc 0
+Hc n5 n7 VO 8.13697715515k
+
+
+* independent current source
+Id n7 n4 dc 1.02637626609m
+
+* dependent current source
+Gb n4 n3 n2 n5 7.27607852163m
+
+* resistors
+R1 n1 n2 1.03034608494k
+R2 n2 n3 2.03076273175k
+R3 n2 n5 3.09442618781k
+R4 GND n5 4.08713017488k
+R5 n4 n5 3.00518812223k
+R6 n6a n6 2.03106965039k
+R7 n6 n7 1.04759435052k
+
+.control
+op
+
+echo "********************************************"
+echo  "Circuit analyzis"
+echo "********************************************"
+
+echo  "current_TAB"
+
+print @R1[i]
+print @R2[i]
+print @R3[i]
+print @R4[i]
+print @R5[i]
+print @R6[i]
+print @R7[i]
+
+echo  "current_END"
+
+.endc
+.end

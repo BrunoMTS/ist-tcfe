@@ -1,0 +1,16 @@
+octavecurrent_TAB
+Ja = -0.00022595
+Jb = -0.00023645
+Jc =  0.00095088
+Jd =  0.0010264
+octavecurrent_END
+octavevoltage_TAB
+V0 = 0
+V1 =  5.0102
+V2 =  4.7774
+V3 =  4.2972
+V4 =  8.6049
+V5 =  4.8099
+V6 = -1.9313
+V7 = -2.9274
+octavevoltage_END

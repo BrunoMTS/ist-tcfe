@@ -1,0 +1,37 @@
+
+Warning: Missing .control statement!
+    This may cause subsequent errors.
+
+Warning: misplaced .endc card
+
+Circuit: *
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 1
+********************************************
+Current
+********************************************
+current_ngspice_TAB
+@r1[i] = 2.259480e-04
+@r2[i] = 2.364497e-04
+@r3[i] = -1.05017e-05
+@r4[i] = -1.17683e-03
+@r5[i] = 1.262826e-03
+@r6[i] = 9.508803e-04
+@r7[i] = 9.508803e-04
+current_ngspice_END
+********************************************
+Voltage
+********************************************
+voltage_ngspice_TAB
+n1 = 5.010158e+00
+n2 = 4.777353e+00
+n3 = 4.297180e+00
+n4 = 8.604880e+00
+n5 = 4.809850e+00
+n6 = -1.93130e+00
+n7 = -2.92744e+00
+voltage_ngspice_END
+Note: No ".plot", ".print", or ".fourier" lines; no simulations run
