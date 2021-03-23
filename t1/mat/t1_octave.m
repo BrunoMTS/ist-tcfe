@@ -20,18 +20,18 @@ Kc = 8.13697715515*10^3 ;
 A=[R1+R3+R4,-R3,-R4,0;Kb*R3,1-Kb*R3,0,0;-R4,0,R6+R4-Kc+R7,0;0,0,0,1];
 B=[-Va;0;0;Id];
 M=A\B;
-
-printf("octave_current_TAB\n");
+printf("octavecurrent_TAB\n");
 Ja=M(1)
 Jb=M(2)
 Jc=M(3)
 Jd=M(4)
-printf("octave_current_end");
+printf("octavecurrent_END\n");
 
 C=[-G1,G1+G2+G3,-G2,0,-G3,0,0;0,-Kb,0,-G5,Kb+G5,0,0;0,-G2-Kb,G2,0,Kb,0,0;0,0,0,0,0,G6+G7,-G7;1,0,0,0,0,0,0;0,0,0,0,1,Kc*G6,-1;0,G3,0,G5,-G4-G5-G3,G7,-G7];
 D=[0;-Id;0;0;Va;0;Id];
 N=C\D;
-printf("octave_voltage_TAB\n");
+
+printf("octavevoltage_TAB\n");
 V1=N(1)
 V2=N(2)
 V3=N(3)
@@ -39,5 +39,5 @@ V4=N(4)
 V5=N(5)
 V6=N(6)
 V7=N(7)
-printf("octave_voltage_end");
+printf("octavevoltage_END\n");
 

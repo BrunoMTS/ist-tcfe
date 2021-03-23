@@ -1,0 +1,32 @@
+\section{Simulation Analysis}
+\label{sec:simulation}
+
+\subsection{Operating Point Analysis}
+
+Table~\ref{tab:vngspice} and Table~\ref{tab:cngspice}  show the simulated operating point results for the circuit
+under analysis. Compared to the theoretical analysis results, it can be seen that the values that were obtained from the simulation are exactly the same for the voltages and currents of the circuit.
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V]} \\ \hline
+    \input{voltage_ngspice_tab}
+  \end{tabular}
+  \caption{Operating point. The variables are  expressed in Volt and represent, in particular, the {\it voltage} at each node of the circuit.}
+  \label{tab:vngspice}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [A]} \\ \hline
+    \input{current_ngspice_tab}
+  \end{tabular}
+  \caption{Operating point. The variables are expressed in Ampere and represent the {\em current} in each branch of the circuit.}
+  \label{tab:cngspice}
+\end{table}
+
+
+

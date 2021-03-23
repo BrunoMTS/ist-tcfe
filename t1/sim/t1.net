@@ -12,7 +12,7 @@
 Va n1 GND dc 5.01015797903
 
 * dependent voltage source and voltage source necessary to define it
-VO GND n6a dc 0
+VO GND n0 dc 0
 Hc n5 n7 VO 8.13697715515k
 
 
@@ -28,17 +28,17 @@ R2 n2 n3 2.03076273175k
 R3 n2 n5 3.09442618781k
 R4 GND n5 4.08713017488k
 R5 n4 n5 3.00518812223k
-R6 n6a n6 2.03106965039k
+R6 n0 n6 2.03106965039k
 R7 n6 n7 1.04759435052k
 
 .control
 op
 
 echo "********************************************"
-echo  "Circuit analyzis"
+echo  "Current"
 echo "********************************************"
 
-echo  "current_TAB"
+echo  "current_ngspice_TAB"
 
 print @R1[i]
 print @R2[i]
@@ -48,7 +48,28 @@ print @R5[i]
 print @R6[i]
 print @R7[i]
 
-echo  "current_END"
+echo  "current_ngspice_END"
+
+echo "********************************************"
+echo  "Voltage"
+echo "********************************************"
+
+echo  "voltage_ngspice_TAB"
+
+print n1
+print n2
+print n3
+print n4
+print n5
+print n6
+print n7
+
+echo  "voltage_ngspice_END"
+
+quit
 
 .endc
+
 .end
+
+
