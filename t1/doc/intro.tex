@@ -2,8 +2,7 @@
 \label{sec:introduction}
 
 % state the learning objective
-The objective of this laboratory assignment is to study a circuit containing an independent voltage source $V_a$, a dependent voltage source $V_c$, an a independent current source $I_d$, a dependent current source $I_b$ and seven resistors $R$. The given circuit is composed by four elementary meshes. The circuit can be seen in Figure~\ref{fig:t1_circuit}.
-
+The objective of this laboratory assignment is to study a circuit containing an independent voltage source $V_a$, a dependent voltage source $V_c$, an a independent current source $I_d$, a dependent current source $I_b$ and seven resistors $R$. The given circuit is composed by four elementary meshes. The circuit can be seen in Figure~\ref{fig:t1_circuit}, and the correspondent values in Table~\ref{tab:input_values} .
 
 In Section~\ref{sec:analysis}, a theoretical analysis of the circuit is
 presented. In Section~\ref{sec:simulation}, the circuit is analysed by
@@ -12,9 +11,20 @@ Section~\ref{sec:analysis}. The conclusions of this study are outlined in
 Section~\ref{sec:conclusion}.
 
 \begin{figure}[h] \centering
-\includegraphics[width=0.6\linewidth]{t1_circuit.pdf}
+\includegraphics[width=0.8\linewidth]{t1_circuit.pdf}
 \caption{Circuit with independent sources, dependent sources and resistors.}
 \label{fig:t1_circuit}
 \end{figure}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [R, V, A and S]} \\ \hline
+    \input{input_values_tab}
+  \end{tabular}
+  \caption{Input values of Resistors, Voltage Source, Current Source and constants Kb and Kc.}
+  \label{tab:input_values}
+\end{table}
 
 

@@ -17,6 +17,20 @@ Id = 1.02637626609*10^-3 ;
 Kb = 7.27607852163*10^-3 ; 
 Kc = 8.13697715515*10^3 ;
 
+printf("input_values_TAB\n");
+R1  
+R2 
+R3 
+R4 
+R5 
+R6 
+R7 
+Va 
+Id 
+Kb 
+Kc
+printf("input_values_END\n");
+
 A=[R1+R3+R4,-R3,-R4,0;Kb*R3,1-Kb*R3,0,0;-R4,0,R6+R4-Kc+R7,0;0,0,0,1];
 B=[-Va;0;0;Id];
 M=A\B;
@@ -40,4 +54,5 @@ V5=N(5)
 V6=N(6)
 V7=N(7)
 printf("octavevoltage_END\n");
+
 
