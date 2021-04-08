@@ -1,0 +1,54 @@
+
+.options savecurrents
+
+
+
+
+*Va n1 GND dc 5.01015797903 
+
+
+VO GND n0 dc 0
+Hd n5 n8 VO 8.13697715515k
+
+
+Gb n6 n3 n2 n5 7.27607852163m
+
+
+R1 n1 n2 1.03034608494k
+R2 n2 n3 2.03076273175k
+R3 n2 n5 3.09442618781k
+R4 GND n5 4.08713017488k
+R5 n5 n6 3.00518812223k
+R6 n0 n7 2.03106965039k
+R7 n7 n8 1.04759435052k
+C n6 n8 1.02637626609u
+
+
+
+.ic v(n6)=8.44787 v(n8)=0
+.op
+.end
+.control
+
+*makes plots in color
+set hcopypscolor=0
+set color0=white
+set color1=black
+set color2=red
+set color3=blue
+set color4=violet
+set color5=rgb:3/8/0
+set color6=rgb:4/0/0
+
+op
+
+tran 1e-5 20e-3
+
+hardcopy trans.ps v(n6)
+echo trans_FIG
+quit
+.endc
+
+.end
+
+
