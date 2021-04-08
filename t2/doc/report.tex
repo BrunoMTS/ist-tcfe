@@ -15,12 +15,12 @@
 \hyphenation{GTKWave}
 \usepackage{listings}
 \usepackage[all]{nowidow}
-\usepackage{graphicx}
+\usepackage{float}
 %blind text
 \usepackage{lipsum}
 
 \usepackage{graphicx}
-\graphicspath{ {./} {../../figlib/} }
+\graphicspath{{./}{../../figlib/}{../mat/}{../sim/}}
 \def\FontLn{% 16 pt normal
   \usefont{T1}{phv}{m}{n}\fontsize{16pt}{16pt}\selectfont}
 \def\FontLb{% 16 pt bold
@@ -90,9 +90,7 @@
 %  Cover page
 % ----------------------------------------------------------------------
 \input{frontcover}
-
-
-
+\newpage
 
 % ----------------------------------------------------------------------
 % Dedication page (optional)
@@ -120,15 +118,8 @@
 
 % Table of contents
 %
-
-
-
-\newpage
 \tableofcontents
-
-
-
-
+\newpage
 
 % List of tables
 %\addcontentsline{toc}{section}{\listtablename}
@@ -151,11 +142,10 @@
 
 \input{intro}
 
-%\newpage
 \input{analysis}
 
 \newpage
-\newpage
+
 \input{simulation}
 
 \input{conclusion}
@@ -171,5 +161,3 @@
 % ----------------------------------------------------------------------
 \end{document}
 % ----------------------------------------------------------------------
-
-

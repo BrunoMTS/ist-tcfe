@@ -13,55 +13,49 @@ So, applying KCL for node 1, we have:
 
 \begin {equation}
 V_1 - V_0= V_s
-  \label {eq:kvl}
 \end{equation}
 
 Node 2:
 \begin {equation}
   (V_3 - V_2)\times G_2 = (V_2 - V_1)\times G_1 + (V_2 - V_5)\times G_3
-  \label {eq:kvl}
 \end{equation}
 
 Node 3:
 \begin{equation}
 (V_3- V_2)\times G_2 = K_b\times (V_2 - V_5)
-  \label {eq:kvl}
 \end{equation}
 
 Node 6:
 \begin {equation}
 (V_5 - V_6)\times G_5 = K_b\times (V_2 - V_5)
-  \label {eq:kvl}
 \end{equation}
 
 And node 7:
 \begin {equation}
 (V_0-V_7)\times G_6 = (V_7 - V_8)\times G_7
-  \label {eq:kvl}
 \end{equation}
 
 The additional equations are:
 
 \begin {equation}
 V_5 - V_8 = -K_d\times (V_7)\times G_6
-  \label {eq:kvl}
 \end{equation}
 
 \begin {equation}
 (V_2 - V_5)\times G_3 - (V_5 - V_0)\times G_4 - (V_5 - V_6)\times G_5 + (V_7 - V_8)\times G7 = 0
-  \label {eq:kvl}
 \end{equation}
+
 
 The equation (7) are obtained using the voltage drop between the voltage source. The last equation was derived using a super-node that contains the dependent voltage source. Applying the node law, the sum of currents that enter the dependent voltage source is equal to the sum of currents that leaves it. 
 
 \begin{figure}[h] \centering
-\includegraphics[width=0.7\linewidth]{rc2.pdf}
+\includegraphics[width=0.8\linewidth]{rc2.pdf}
 \caption{Circuit that was used to obtained the 2.1 equations.}
-\label{fig:rc1}
+\label{fig:rc2}
 \end{figure}
 
-The values that where computed from the system of 8 equations are represented in the next table (table \ref{tab:NM}).
 
+The values that where computed from the system of 8 equations are represented in the next table (table \ref{tab:NM}).
 
 \begin{table}[h]
   \centering
@@ -76,8 +70,6 @@ The values that where computed from the system of 8 equations are represented in
   \label{tab:NM}
 \end{table}
 
-
-\newpage
 \subsection{Determination of the equivalent resistance ($Req$) as seen from the capacitor terminals}
 
 As suggested in the laboratory task, we made $V_s$=0 and we replaced the capacitor with a voltage source $V_x$= $V_6$-$V_8$, where $V_6$ and $V_8$ are the voltages in nodes 6 and 8 (as obtained in 2.1). Then we ran a nodal analysis to determine the current $I_x$ supplied by $V_x$. Finally we computed the equivalent resistor as $R_eq = V_x/I_x$, and the time constant.
@@ -86,49 +78,38 @@ Using the node method one more time to analyse the circuit, we will obtain the n
 
 \begin {equation}
   (V_3 - V_2)\times G_2 = (V_2 - V_1)\times G_1 + (V_2 - V_5)\times G_3
-  \label {eq:kvl}
 \end{equation}
 
 Node 3:
 \begin{equation}
 (V_3- V_2)\times G_2 = K_b\times (V_2 - V_5)
-  \label {eq:kvl}
 \end{equation}
 
 Node 6:
 \begin {equation}
 (V_6 - V_8)= V_x
-  \label {eq:kvl}
 \end{equation}
 
 And node 7:
 \begin {equation}
 (V_0-V_7)\times G_6 = (V_7 - V_8)\times G_7
-  \label {eq:kvl}
 \end{equation}
 
 The additional equations are:
 
 \begin {equation}
 V_1 - v_0= V_s
-  \label {eq:kvl}
 \end{equation}
 
 \begin {equation}
 V_5 - V_8 = -K_d\times (V_7)\times G_6
-  \label {eq:kvl}
 \end{equation}
 
 \begin {equation}
   (V_2 - V_5)\times G_3 + (V_7 - V_8)\times G_7 = (V_5 - V_0)\times G_4 + Kb\times(V_2 - V_5)
-  \label {eq:kvl}
 \end{equation}
 
-
-
-The main differences compared to the previous system, are the definition of a super-node that contains the nodes 5, 6 and 8, and the definition of the voltage source. We obtained the next results, from the computation of the above equations.
-
-
+The main differences compared to the previous system, are the definition of a super-node that contains the nodes 5, 6 and 8, and the definition of the voltage source. We obtained the next results, from the computation of the equations above.
 
 \begin{table}[h]
   \centering
@@ -138,11 +119,11 @@ The main differences compared to the previous system, are the definition of a su
     \input{octavevalues2_tab}
   \end{tabular}
   \caption{Theoretical values obtained using octave to solve equations of Node Method for the expressed conditions.}
-  \label{tab:DS}
+  \label{tab:ocatvevalues2}
 \end{table}
 
+\subsection{Computation of the natural solution $v6n(t)$, in the interval [0, 20] ms}
 
-\subsection{Computation of the natural solution $v_6n(t)$, in the interval [0, 20] ms}
 
 
 After we compute the $R_(eq)$ and the current that passes through the capacitor, we can simplify the circuit to a  single V-R-C loop where a current $i(t)$ circulates. The
@@ -152,7 +133,7 @@ equation for the single loop in the circuit can be written as
 
 \begin{equation}
   Ri(t) + v_O(t) = v_I(t).
-  \label{eq:kvl}
+  \label{eq:KVL1}
 \end{equation}
 
 Because $v_O$ is the voltage between capacitor C's plates, it is related to the
@@ -161,18 +142,18 @@ current $i$ by
   i(t) = C\frac{dv_O}{dt}.
 \end{equation}
 
-Hence, Equation~(\ref{eq:kvl}) can be rewritten as
+Hence, Equation~(\ref{eq:KVL!}) can be rewritten as
 \begin{equation}
   RC\frac{dv_O}{dt} + v_O(t) = v_I.
-  \label{eq:kvl2}
+  \label{eq:KVL2}
 \end{equation}
 
-Equation~(\ref{eq:kvl2}) is a linear differential equation whose solution is a
+Equation~(\ref{eq:KVL2}) is a linear differential equation whose solution is a
 superposition of a natural solution $v_{On}$ and a forced solution $v_{Of}$:
 
 \begin{equation}
   v_O(t) = v_{On}(t) + v_{Of}(t).
-  \label{eq:vo_sol}
+  \label{eq:vo_sobreposição}
 \end{equation}
 
 As learned in the theory classes the natural solution can be represented by the next equation:
@@ -182,7 +163,6 @@ As learned in the theory classes the natural solution can be represented by the 
 \end{equation}
 where $A$ is an integration constant.
 As we know the initial conditions, we can obtain the constant $A$ that is going to be equal to $V_x$. In this way, the natural solution is obtained.
-
 
 With the results obtained in 2.2),  we have determined the natural solution $v_6n(t)$, in the interval [0, 20] ms. It was used the capacitor voltage $V_x$ for t\textless0 as the initial condition.
 
@@ -194,14 +174,10 @@ Using the next equation (knowing $V_x$ and the greek letter tau) we can plot the
 \end{equation}
 
 \begin{figure}[h] \centering
-\includegraphics[width=0.8\linewidth]{natural_response.eps}
+\includegraphics[width=0.7\linewidth]{natural_response.eps}
 \caption{Natural response in v6.}
 \label{fig:nat}
 \end{figure}
-
-
-
-
 
 \subsection{Computation of the forced solution $v_6n(t)$, in the interval [0, 20] ms}\
 
@@ -221,36 +197,29 @@ The next table shows the obtained values.
   \label{tab:PH}
 \end{table}
 
-\newpage
 In this way, as was expected, the only phasor that is not above the real axis, is the one that is not related to the capacitor. 
 
 To determine the expression, $v_6f(t)$, we had to obtain the gain and the phase delay:
 
-
 \begin{equation}
   \frac{v6}{vs}=|\tilde{V_6}|
-  \label{eq:vo_nat}
 \end{equation}
 
 \begin{equation}
   {{\displaystyle \phi }}=arg(\tilde{V_6})
-  \label{eq:vo_nat}
 \end{equation}
 
 \begin{equation}
   {v_6f(t)}=|\tilde{V_6}|*sin(2\pi f+ {\displaystyle \phi })
-  \label{eq:vo_nat}
 \end{equation}
 
-
 \begin{figure}[h] \centering
-\includegraphics[width=0.8\linewidth]{forced_response.eps}
-\caption{Final total solution $v_6(t)$. The orange function corresponds to the forced solution of v6(t) and the blue one corresponds to sinusoidal voltage source }
+\includegraphics[width=0.5\linewidth]{forced_response.eps}
+\caption{Final total solution $v_6(t)$. The orange function corresponds to the forced solution of v6(t) and the blue one corresponds to sinusoidal voltage source. }
 \label{fig:forced}
 \end{figure}
-\newpage
 
-\subsection{Computation of the final total solution $v_6(t)$}
+\subsection{Computation of the final total solution $v6(t)$}
 
 To determine the final total solution $v_6(t)$, we converted the phasors to real time functions with $f=1KHz$, and superimposed the natural and forced solutions (as we can see in Figure \ref{fig:tot}). In this picture we plotted $v_s(t)$ and $v_6(t)$ in a time interval of [-5,20]ms.
 
@@ -258,8 +227,9 @@ To determine the final total solution $v_6(t)$, we converted the phasors to real
   v_6(t)= V_xe^{-\frac{t}{{\displaystyle \tau }}} + |\tilde{V_6}|*sin(2\pi f+ {\displaystyle \phi })
   \label{eq:vo_nat}
 \end{equation}
-\begin{figure}[h] \centering
-\includegraphics[width=0.8\linewidth]{total_solution.eps}
+
+\begin{figure}[H] \centering
+\includegraphics[width=0.5\linewidth]{total_solution.eps}
 \caption{Final total solution $v_6(t)$. The Red function corresponds to $v_6(t)$ and the blue one to $v_s(t)$}
 \label{fig:tot}
 \end{figure}
@@ -267,25 +237,32 @@ To determine the final total solution $v_6(t)$, we converted the phasors to real
 
 
 \subsection{Frequency Responses}
+
 In this part it was asked for us to determine the frequency responses $v_c(f)=v_6(f)-v_8(f)$, and $v_6(f)$ and to plot $v_s(f)$,  $v_c(f)$  and $v_6(f)$ in the same figure. After we have concluded the given task, we can formulate some conclusions- The behaviour of the capacitor is due to the fact that as the frequency applied to the capacitor increases, its reactance decreases (measured in ohms). Likewise as the frequency across the capacitor decreases its reactance value increases. So, $v_c(t)$ is going to tend to zero with the increase of the frequency, because its impedance also tends to zero. That is, we have a short circuit. If the tension $v_c(t)$ starts tending to zero, this one stops of having influence in $v_6(t)$, and this last stays constant. $v_s(t)$ always have a constant value and a constant phase.The Bode's diagram of $v_c(t)$ allow us to conclude that we are in front of a low-pass filter, that is, this filter is a high frequency attenuater.
 
-\begin{figure}[h] \centering
-\includegraphics[width=0.8\linewidth]{at51.eps}
-\caption{Bode diagram (magnitude in dB's) of $v_6(t)$ }
-\label{fig:51}
-\includegraphics[width=0.8\linewidth]{at52.eps}
-\caption{F{Bode diagram (magnitude in dB's) of $v_6(t)$ and $v_c(t)$}}
-\end{figure}
 
 \begin{figure}[h] \centering
+\includegraphics[width=0.6\linewidth]{at51.eps}
+\caption{Bode diagram (magnitude in dB's) of $v_6(t)$ }
+\label{fig:51}
+\end{figure}
+
+\begin{figure}[H] \centering
+\includegraphics[width=0.6\linewidth]{at52.eps}
+\caption{Bode diagram (magnitude in dB's) of $v_6(t)$ and $v_c(t)$}
+\end{figure}
+
+\begin{figure}[H] \centering
 \label{fig:52}
-\includegraphics[width=0.8\linewidth]{at53.eps}
+\includegraphics[width=0.6\linewidth]{at53.eps}
 \caption{{Bode diagram (phase in degrees) of $v_6(t)$ } }
 \label{fig:53}
-\includegraphics[width=0.8\linewidth]{at54.eps}
+\end{figure}
+
+\begin{figure}[H] \centering
+\includegraphics[width=0.6\linewidth]{at54.eps}
 \caption{{Bode diagram (magnitude in dB's) of $v_6(t)$, $v_c(t)$ and $v_s(t)$ }}
 \label{fig:54}
 \end{figure}
 
 
-\newpage
