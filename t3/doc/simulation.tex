@@ -1,0 +1,80 @@
+\newpage
+\section{Simulation Analysis}
+\label{sec:simulation}
+
+
+\subsection{AC/DC Converter}
+
+The objective of this laboratory was to build an AC/DC converter. With this objective in mind, we have implemented the circuit that is represented below (Figure~\ref{fig:acdc}). \\This circuit is constituted by two components, an envelope detector and a voltage regulator, that we are going to analyse in the next subsections.
+ 
+ 
+
+\vspace{-0.3in}
+\begin{figure}[H] \centering
+\includegraphics[width=0.8\linewidth]{acdc.pdf}
+\vspace{-0.5in}
+\caption{AC/DC Converter developed}
+\label{fig:acdc}
+\end{figure}
+
+\vspace{-0.85in}
+\subsection{Ideal Transformer}
+
+The ideal transformer was introduced in the circuit with two dependent sources, using the relations learned in the theoretical classes, with a $n$ value, that will be balanced to obtain a voltage average of 12V. 
+
+
+\subsection{Envelope detector}
+
+The purpose of the envelope detector is to convert the AC in a voltage that looks very similar to a DC, with little ripple oscillations. \\This result was obtained using a fullwave rectifier and a capacitor.
+In the graphic below (Figure~\ref{fig:dev}), it is shown the output at the terminals of this module.
+
+
+\vspace{-0.9in}
+\begin{figure}[H] \centering
+\includegraphics[width=0.45\linewidth]{vedspice.pdf}
+\caption{Envelope detector output}
+\label{fig:dev}
+\end{figure}
+
+\subsection{Voltage Regulator}
+
+ 
+This module purpose was to attenuate the ripple at the output of the detector envelope in order to improve the parameters. With the implementation of a resistor and 19 diodes in parallel we obtained the following response: 
+
+\vspace{-0.9in}
+\begin{figure}[H] \centering
+\includegraphics[width=0.45\linewidth]{vospice.pdf}
+\caption{Voltage regulator output}
+\label{fig:vo}
+\end{figure}
+
+\newpage
+We can verify and measure the values of the average voltage and of the ripple. This values will be presented in Table~\ref{tab:r}:
+
+
+\vspace{0.1in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V]} \\ \hline
+    \input{MAXMIN_tab}
+  \end{tabular}
+  \caption{Values of average, maximum and minimum voltage and the ripple value}
+  \label{tab:r}
+\end{table}
+\vspace{0.3in}
+
+Finally, we have presented, graphically, $V0-12$ between 50ms and 100 ms in order to verify the behaviour (Fig~\ref{fig:vori}). Also, we reduced the scale to perceive the slight variation in tension.
+
+\vspace{-0.9in}
+\begin{figure}[H] \centering
+\includegraphics[width=0.6\linewidth]{voripple.pdf}
+\caption{Ripple output (vO-12)}
+\label{fig:vori}
+\end{figure}
+
+
+\newpage
+
+

@@ -1,0 +1,213 @@
+\section{Theoretical Analysis}
+\label{sec:analysis}
+
+In this section, we used a suitable theoretical model that is able to predict the output of the Envelope Detector and Voltage Regulator circuits.
+
+\subsection{Computation of the fullwave rectifier}
+
+To compute the fullwave rectifier we used the ideal diode model+v0n approximation. Thus, the function at the output of the fullwave rectifier is defined by branches with the following expressions:
+
+\[
+\syslineskipcoeff{1}
+\systeme{vS>1.4 => vOfr= vS-0.7, vS<-1.4 => vOfr= -vS-0.7, -1.4<vS<1.4=> vOfr = 0}
+\]
+
+\vspace{0.2in}
+
+The fullwave rectifier responses were the expected ones and are presented in the next figure (Fig~\ref{fig:onda}):
+
+
+\begin{figure}[h] \centering
+\includegraphics[width=0.8\linewidth]{vOfr.eps}
+\caption{Fullwave rectifier output}
+\label{fig:onda}
+\end{figure}
+
+\subsection{Computation of the envelope detector}
+
+The next stage was to compute the envelope detector's response. This is, the result of having the capacitor, that does not allow the voltage to come down in the same way when it is discharging, what allows us to obtain a more constant voltage value with less oscillations. In this way, we used the next approximations, that we have learned in the theoretical classes:
+
+
+\[
+\syslineskipcoeff{1}
+\systeme{t<tOFF => vED = vOfr,tOFF < t < tON => vED = vOnexp,t>tON=> vED = vOfr}
+\]
+
+
+With the $t_{OFF}$ period defined by:
+\begin {equation}
+tOFF=tOFF+1/(2*f);
+\end{equation}
+And with $vOn_{exp}$:
+\begin {equation}
+vOnexp = abs((A-0.7)*sin(w*t_{OFF})*exp(-(t-t_{OFF})/R/C));
+\end{equation}
+
+\vspace{0.3in}
+The result obtained was plotted and presented in the graphic below:
+
+
+\begin{figure}[h] \centering
+\includegraphics[width=0.8\linewidth]{envelope.eps}
+\caption{Envelope detector output}
+\label{fig:rc2}
+\end{figure} 
+
+\vspace{0.3in}
+With this data, we were also able to calculate the ripple in the output of the envelope detector, using the max. and min. functions. The values are presented in the next table: 
+
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V]} \\ \hline
+    \input{MAXMIN_tab}
+  \end{tabular}
+  \caption{Values of average, maximum and minimum voltage and the ripple value}
+  \label{tab:1}
+\end{table}
+
+\newpage
+\subsection{Computation of the voltage regulator}
+
+To determine the resistance value in each diode, we proceeded to do a simulation using the Ngspice tool. In this simulation we placed our voltage regulator, which contains 19 diodes and a resistance, with a DC voltage of 80,443 [V] and an AC voltage source with the arbitrary value of 10V.\newline
+From this point, we obtained the values of $v_i$ and $i_i$ with the approximation of $n*r_d=v_i/i_i$, then we calculated the resistance value for each diode, which was 1,229/19=0,06468 kOhm.
+With the previous value we calculated the ripple value at the regulator output through its gain:
+
+\vspace{0.2in}
+\begin{equation}
+ ripple_{VR}=\frac{ripple_{ED}\times 19\times rd}{(R+19\times rd)}   
+\end{equation}
+\vspace{0.2in}
+
+
+The ripple value corresponds to:
+
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V]} \\ \hline
+    \input{ripple_tab}
+  \end{tabular}
+  \caption{Theoretical ripple value}
+  \label{tab:2}
+\end{table}
+
+The output plot of our converter, that is, after the envelope detector and the voltage regulator is as follows:
+
+\begin{figure}[h] \centering
+\includegraphics[width=0.8\linewidth]{vofinal.eps}
+\caption{Final representation of the output voltage}
+\label{fig:vofin}
+\end{figure} 
+
+
+\section{Side by side analysis}
+
+In this section we are going to analyse and compare the plots and results generated with the Ngspice simulation, and with the Octave tool (Theoretical analysis). 
+
+
+\begin{figure}[H]
+\centering
+  \begin{subfigure}[b]{0.4\textwidth}
+  \centering
+    \includegraphics[scale = 0.3]{vedspice.pdf}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+  \centering
+    \includegraphics[scale = 0.4]{envelope.eps}
+  \end{subfigure}
+  \caption{Envelope detector plots from Ngspice (left) and from Octave (right).}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+  \begin{subfigure}[b]{0.4\textwidth}
+  \centering
+    \includegraphics[scale = 0.3]{vospice.pdf}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.4\textwidth}
+  \centering
+    \includegraphics[scale = 0.4]{vofinal.eps}
+  \end{subfigure}
+  \caption{Voltage Regulator plots from Ngspice (left) and from Octave (right).}
+\end{figure}
+
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V]} \\ \hline
+    \input{ripple_tab}
+  \end{tabular}
+  \caption{Theoretical ripple value}
+  \label{tab:3}
+\end{table}
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V]} \\ \hline
+    \input{MAXMIN_tab}
+  \end{tabular}
+  \caption{Simulation ripple value}
+  \label{tab:4}
+\end{table}
+
+
+As we can observe, very similar results are represented in the plots, with little differences between them in the order of $10^{-4}$. This differences are perceptible when we evaluate the theoretical and the simulated ripple. In the theoretical analysis we used several approximations that consider a better diode performance than the one that is simulated, so the theoretical ripple value is going to be inferior to the one obtained by the simulation.
+
+
+\section{Merit Figure}
+
+The principal objective of this work is to build a circuit with the highest merit figure as possible.\\
+For this Calculations we used the next expression:
+
+\begin{equation}
+    M = \frac{1}{cost\times(ripple(V0) + average(V0-12) + (10^{-6}))}  
+\end{equation}
+
+\vspace{0.3in}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [MU]} \\ \hline
+    \input{costs_tab}
+  \end{tabular}
+  \caption{Cost value}
+  \label{tab:7}
+\end{table}
+
+\vspace{0.3in}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Merit} \\ \hline
+    \input{fm_tab}
+  \end{tabular}
+  \caption{Theoretical and simulation merit}
+  \label{tab:8}
+\end{table}
+
+cost = cost of resistors + cost of capacitors + cost of diodes
+
+cost of resistors = 1 monetary unit (MU) per kOhm
+
+cost of capacitors = 1 MU/$\mu$F
+
+cost of diodes = 0.1 MU per diode
+\paragraph{}
