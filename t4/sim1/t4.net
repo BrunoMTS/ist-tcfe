@@ -56,9 +56,8 @@ print all
 tran 1e-5 1e-2
 
 plot v(coll)
-*meas ac vdboutmax max vdb(coll) from=10 to=100MEG
-*hardcopy vo1.ps vdb(coll)
-
+hardcopy vgs.ps v(coll)
+echo vgs_FIG
 
 * frequency analysis
 ac dec 10 10 100MEG
@@ -81,20 +80,23 @@ print freq_atu - freq_atl
 print vdboutmax * ( freq_atu - freq_atl ) / freq_atl
 echo  "SIMVALUES_END"
 
-*plot vdb(coll)
-*plot vp(coll)
-*hardcopy vo1f.ps vdb(coll)
+plot vdb(coll)
+hardcopy vdbgs.ps vdb(coll)
+echo vdbgs_FIG
 
 
-*plot v(out)
 plot vdb(out)
-*plot vp(out)
 hardcopy vdbout.ps vdb(out)
+echo vdbout_FIG
 
 *input impedance in kohm
-print v(in2)[40]/(v(in)[40]-v(in2)[40])/100*1000
 
-*need a different setup to measure output impedance
+plot abs(v(in2)/vin#branch/(-1000))
+hardcopy Zi.ps abs(v(in2)/vin#branch/(-1000))
+print v(in2)[40]/vin#branch[40]/(-1000)
+echo zi_FIG
+
+
 
 .endc 
 

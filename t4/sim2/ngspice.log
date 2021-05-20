@@ -1,0 +1,293 @@
+
+Circuit: .options savecurrents
+
+false = 0.000000e+00
+true = 1.000000e+00
+boltz = 1.380649e-23
+c = 2.997925e+08
+e = 2.718282e+00
+echarge = 1.602177e-19
+i = 0.000000e+00,1.000000e+00
+kelvin = -2.73150e+02
+no = 0.000000e+00
+pi = 3.141593e+00
+planck = 6.626070e-34
+yes = 1.000000e+00
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vcc                                         12
+emit2                                 0.862365
+out                                          0
+vout#branch                                  0
+vcc#branch                           -0.111376
+
+
+No. of Data Rows : 1008
+Error: no such vector coll
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 71
+********************************************
+SIM VALUES
+********************************************
+SIMVALUES_TAB
+SIMVALUES_END
+ERROR: (internal)  This operation is not defined for display type printf.
+Can't open viewport for graphics.
+
+The file "zo.ps" may be printed on a postscript printer.
+v(out)[40]/vout#branch[40]/(-1000) = 1.061204e-03,1.005901e-06
+zo_FIG
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 1
+	Node                                  Voltage
+	----                                  -------
+	----	-------
+	out                              0.000000e+00
+	emit2                            8.623650e-01
+	vcc                              1.200000e+01
+
+	Source	Current
+	------	-------
+
+	vcc#branch                       -1.11376e-01
+	vout#branch                      0.000000e+00
+
+ BJT models (Bipolar Junction Transistor)
+      model                bc557a
+
+       type                   pnp
+       tnom                    27
+         is             2.059e-14
+         bf                 227.3
+         nf                 1.003
+        vaf                  37.2
+        ikf               0.08719
+        ise             2.971e-15
+         ne                 1.316
+         br                  7.69
+         nr                 1.007
+        var                 11.42
+        ikr               0.07646
+        isc             1.339e-14
+         nc                  1.15
+         rb                     1
+        irb                 1e-06
+        rbm                     1
+         re                 0.688
+         rc                0.6437
+        cje               1.4e-11
+        vje                0.5912
+        mje                0.3572
+         tf             7.046e-10
+        xtf                 4.217
+        vtf                 5.367
+        itf                0.1947
+        ptf                     0
+        cjc             1.113e-11
+        vjc                   0.1
+        mjc                0.3414
+       xcjc                0.6288
+         tr                 0.001
+        cjs                     0
+        vjs                  0.75
+        mjs                     0
+        xtb                   1.5
+         eg                  1.11
+        xti                     3
+         fc                0.7947
+         kf                     0
+         af                     0
+        iss                     0
+         ns                     1
+       tlev                     0
+      tlevc                     0
+       tbf1                     0
+       tbf2                     0
+       tbr1                     0
+       tbr2                     0
+      tikf1                     0
+      tikf2                     0
+      tikr1                     0
+      tikr2                     0
+      tirb1                     0
+      tirb2                     0
+       tnc1                     0
+       tnc2                     0
+       tne1                     0
+       tne2                     0
+       tnf1                     0
+       tnf2                     0
+       tnr1                     0
+       tnr2                     0
+       trb1                     0
+       trb2                     0
+       trc1                     0
+       trc2                     0
+       tre1                     0
+       tre2                     0
+       trm1                     0
+       trm2                     0
+      tvaf1                     0
+      tvaf2                     0
+      tvar1                     0
+      tvar2                     0
+        ctc                     0
+        cte                     0
+        cts                     0
+       tvjc                     0
+       tvje                     0
+       tvjs                     0
+      titf1                     0
+      titf2                     0
+       ttf1                     0
+       ttf2                     0
+       ttr1                     0
+       ttr2                     0
+      tmje1                     0
+      tmje2                     0
+      tmjc1                     0
+      tmjc2                     0
+      tmjs1                     0
+      tmjs2                     0
+       tns1                     0
+       tns2                     0
+        nkf                   0.5
+       tis1                     0
+       tis2                     0
+      tise1                     0
+      tise2                     0
+      tisc1                     0
+      tisc2                     0
+    vbe_max                 1e+99
+    vbc_max                 1e+99
+    vce_max                 1e+99
+
+ Capacitor models (Fixed capacitor)
+      model                     C
+
+        cap                     0
+         cj                     0
+       cjsw                     0
+       defw                 1e-05
+       defl                     0
+     narrow                     0
+      short                     0
+        del                     0
+        tc1                     0
+        tc2                     0
+         di                     0
+      thick                     0
+     bv_max                 1e+99
+
+ Resistor models (Simple linear resistor)
+      model                     R
+
+        rsh                     0
+     narrow                     0
+      short                     0
+        tc1                     0
+        tc2                     0
+        tce                     0
+       defw                 1e-05
+          l                 1e-05
+         kf                     0
+         af                     0
+          r                     0
+     bv_max                 1e+99
+         lf                     1
+         wf                     1
+         ef                     1
+
+ BJT: Bipolar Junction Transistor
+     device                    q2
+      model                bc557a
+         ic              0.110116
+         ib            0.00125985
+         ie             -0.111376
+        vbe              0.784478
+        vbc             0.0696221
+         gm               2.67963
+        gpi              0.048285
+        gmu            7.1653e-12
+         gx                     1
+         go            0.00318486
+        cpi           8.36238e-09
+        cmu           1.05229e-11
+        cbx           6.29562e-12
+       csub                     0
+
+ Capacitor: Fixed capacitor
+     device                    co
+      model                     C
+capacitance                  0.01
+      dtemp                     0
+     bv_max                 1e+99
+          i                     0
+          p                     0
+
+ Resistor: Simple linear resistor
+     device                  rout
+      model                     R
+ resistance                   100
+         ac                   100
+      dtemp                     0
+     bv_max                 1e+99
+      noisy                     1
+          i             -0.111376
+          p               1.24047
+
+ Vsource: Independent voltage source
+     device                  vout                   vcc
+         dc                     0                    12
+      acmag                     1                     0
+      pulse                     0         -
+                             0.01          
+                             1000          
+        sin                     0         -
+                             0.01          
+                             1000          
+        exp                     0         -
+                             0.01          
+                             1000          
+        pwl                     0         -
+                             0.01          
+                             1000          
+       sffm                     0         -
+                             0.01          
+                             1000          
+         am                     0         -
+                             0.01          
+                             1000          
+    trnoise                     0         -
+                             0.01          
+                             1000          
+   trrandom                     0         -
+                             0.01          
+                             1000          
+          i                     0             -0.111376
+          p                    -0               1.33652
+
+
+Total analysis time (seconds) = 0.017
+
+Total elapsed time (seconds) = 0.030 
+
+Total DRAM available = 3935.898 MB.
+DRAM currently available =  706.355 MB.
+Total ngspice program size =   21.730 MB.
+Resident set size =    9.594 MB.
+Shared ngspice pages =    7.945 MB.
+Text (code) pages =    5.070 MB.
+Stack = 0 bytes.
+Library pages =    1.988 MB.
+
