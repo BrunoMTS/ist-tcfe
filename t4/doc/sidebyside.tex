@@ -1,0 +1,40 @@
+\section{Side by Side comparison}
+\label{sec:sidebyside}
+
+
+In this section we are going to analyse and compare the results generated with the Ngspice simulation and with the Octave tool (Theoretical analysis). 
+
+The results that we are interested are the gain and the input and output impedances
+
+The theoretical values were:
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [dB] [$\Omega$]} \\ \hline
+    \input{gzoctave_tab}
+  \end{tabular}
+  \caption{Theoretical values}
+  \label{tab:op1q}
+\end{table}
+
+The simulation values were:
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [dB] [$\Omega$]} \\ \hline
+    \input{gzspice_tab}
+  \end{tabular}
+  \caption{Simulation values}
+  \label{tab:op1w}
+\end{table}
+
+As we can see, the theoretical values differ from the simulated ones. 
+The first reason for this is that our theoretical model is a much less accurate approximation of reality than the simulation. Also, the theoretical input impedance is lower because it does not take into consideration the load of the rest of the circuit which, despite being small, it exists.
+In the output impedance the same is verified. The theoretical value does not take into consideration the resistive load that it was before. For these factors, the value of the theoretical gain will be bigger than the simulated one.
+
+Even so, the impedance values are inside the expected values, which means that we have a good input impedance, a low output impedance (as proposed) and an adequate gain.
+

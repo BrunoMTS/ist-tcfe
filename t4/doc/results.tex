@@ -1,0 +1,41 @@
+\section{Figure of merit}
+\label{sec:results}
+
+The final objective was to obtain a figure of merit as high as possible. 
+In this section, we present the final result, after we performed all the analysis
+
+This Merit Figure is given by:
+\paragraph{}
+
+\begin{equation}
+    M = \frac{VoltageGain \times BandWidth}{Cost \times LowerCutOffFrequency}  
+\end{equation}
+
+\paragraph{}
+
+cost = cost of resistors + cost of capacitors + cost of transistors
+
+cost of resistors = 1 monetary unit (MU) per kOhm
+
+cost of capacitors = 1 MU/$\mu$F
+
+cost of transistors = 0.1 MU per transistor
+
+\paragraph{}
+
+Finally, we obtained the important values to calculate the Merit Figure, which we present in the table below. The values used were those of the simulation, since they represent a more accurate approximation of reality.
+
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [dB], [Hz] and [MU]} \\ \hline
+    \input{fm_tab}
+  \end{tabular}
+  \caption{Values of interest and FM}
+  \label{tab:op1z}
+\end{table}
+
+

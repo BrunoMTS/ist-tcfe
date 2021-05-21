@@ -1,0 +1,265 @@
+\section{Theoretical Analysis}
+\label{sec:analysis}
+
+In this section, we used a suitable theoretical model that was able to estimate the gain and the output and input impedances of the two stages.
+
+\subsection{Gain Stage}
+
+In this subsection we're going to explain how we analysed, theoretically, this stage and, also, how we calculates the important parameters.
+
+\subsubsection{OP Analysis}
+
+In the operating point analysis we used the Thevenin's equivalent to facilitate its analyses. The circuit is shown in the figure below.
+
+\begin{figure}[h] \centering
+\includegraphics[width=0.8\linewidth]{slide7.pdf}
+\caption{Gain stage circuit (from lecture 17 TCFE) }
+\label{fig:rc2a}
+\end{figure} 
+
+The important values are computed resorting the following equations:
+
+\begin{equation}
+R_B =\frac{R_B1}{R_B1 + R_B2}
+\end{equation}
+
+\begin{equation}
+- V_eq = \frac{R_B2}{R_B1 + R_B2} \times V_CC
+\end{equation}
+
+\begin{equation}
+V_eq + R_B \times I_B + V_BEON + R_E \times I_E = 0    
+\end{equation}
+
+\begin{equation}
+I_E = (1 + \beta_F ) \times I_B    
+\end{equation}
+
+\begin{equation}
+I_B =\frac{V_eq - V_ON}{R_B + (1 + \beta_F ) \times R_E}    
+\end{equation}
+
+\begin{equation}
+I_C =\beta_F \times I_B    
+\end{equation}
+
+\begin{equation}
+V_O = V_CC - R_C \times I_C    
+\end{equation}
+
+\begin{equation}
+V_E = R_E \times I_E    
+\end{equation}
+
+\begin{equation}
+V_CE = V_O - V_E    
+\end{equation}
+
+Incremental parameters:
+
+\begin{equation}
+ g_m = \frac{I_C}{V_T}
+\end{equation}
+
+\begin{equation}
+r_\pi = \frac{\beta_F}{g_m}    
+\end{equation}
+
+\begin{equation}
+r_o \approx \frac{V_A}{I_C}    
+\end{equation}
+
+with:
+
+\begin{equation}
+V_BEON \approx 0.7 V
+\end{equation}
+
+\begin{equation}
+\beta_F = 178.7    
+\end{equation}
+
+\begin{equation}
+V_A = 69.7 V    
+\end{equation}
+
+The results were the following:
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V], [$\Omega$], [A], [S]} \\ \hline
+    \input{gsopoctave_tab}
+  \end{tabular}
+  \caption{Values determined}
+  \label{tab:op1a}
+\end{table}
+
+\newpage
+
+\subsection{Incremental Analysis}
+
+Through incremental analysis of gain stage, we obtained the following circuit:
+
+\begin{figure}[H] \centering
+\includegraphics[width=0.8\linewidth]{slide11.pdf}
+\caption{Incremental analysis of gain stage (From lecture 17 TCFE)}
+\label{fig:rc2s}
+\end{figure} 
+
+In this circuit $R_E$ is canceled by the capacitor bypass. As we are making calculations for our bandwith frequencies, the capacitor already behaves itself like a shortcircuit. We consider $R_E = 0$.
+
+This way, and using the obtained values in the OP analysis, we are able to compute both gain and impedances. 
+
+
+\begin{equation}
+\frac{v_o}{v_i} = R_C \times\frac{-g_m \times r_\pi \times r_o}{(r_o + R_C) \times (R_B || R_\pi)}
+\end{equation}
+
+\begin{equation}
+   Z_I = R_B || R\pi 
+\end{equation}
+\begin{equation}
+   Z_O = r_o || R_C
+\end{equation}
+
+From here we obtained the following values for these parameters:
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V] [dB] [$\Omega$]} \\ \hline
+    \input{gsoctave_tab}
+  \end{tabular}
+  \caption{Values of average, maximum and minimum voltage and the ripple value}
+  \label{tab:op1s}
+\end{table}
+
+\subsection{Output Stage}
+
+In this subsection we're going to explain how we analysed, theoretically, this stage and, also, how we calculated the important parameters as we have done to the gain stage.
+
+\subsubsection{OP Analysis}
+
+
+
+\begin{figure}[H] \centering
+\includegraphics[width=0.95\linewidth]{Output.pdf}
+\caption{Output stage circuit}
+\label{fig:rc2d}
+\end{figure}
+
+
+The circuit analysis resulted in the following equations and values:
+
+\begin{equation}
+R_E \times I_E +  V_EBON + V_I - V_CC = 0
+\end{equation}
+
+\begin{equation}
+I_E = \frac{V_CC - V_EBON - V_I}{R_E}    
+\end{equation}
+
+\begin{equation}
+V_O = V_CC - R_E \times I_E    
+\end{equation}
+
+\begin{equation}
+V_O = V_I + V_EBON    
+\end{equation}
+
+with:
+
+\begin{equation}
+V_CC = 12 V
+\end{equation}
+
+\begin{equation}
+V_EBON \approx 0.7 V    
+\end{equation}
+
+\begin{equation}
+R_E = 100 \Omega    
+\end{equation}
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V] [A]} \\ \hline
+    \input{osopoctave_tab}
+  \end{tabular}
+  \caption{OP values computed}
+  \label{tab:op1d}
+\end{table}
+
+\subsection{Incremental Analysis}
+
+Doing the incremental analysis of the gain stage, we have obtained the following circuit:
+
+
+\begin{figure}[h] \centering
+\includegraphics[width=0.8\linewidth]{slide15.pdf}
+\caption{Incremental analysis of de output stage (From lecture 17 TCFE)}
+\label{fig:rc2f}
+\end{figure} 
+
+
+The circuit was analyzed in order to obtain the gain and impedances. The equations and values obtained are as follows:
+
+\begin{equation}
+    g_\pi= \frac{1}{r_\pi}
+\end{equation}
+
+\begin{equation}
+    g_E = \frac{1}{R_E}  
+\end{equation}
+
+\begin{equation}
+    g_o = \frac{1}{r_o}    
+\end{equation}
+
+From KCL,
+
+\begin{equation}
+    (\frac{1}{R_E} + \frac{1}{r_o}) \times v_o + \frac{v_o - v_i}{r_\pi} - g_m \times v_\pi = 0 
+\end{equation}
+
+\begin{equation}
+    v_\pi = v_i - v_o    
+\end{equation}
+
+which results:
+
+\begin{equation}
+    \frac{v_o}{v_i} = \frac{g_m}{g_\pi + g_E + g_o + g_m}
+\end{equation}
+
+\begin{equation}
+    Z_I = \frac{g_\pi + g_E + g_o + g_m}{g_\pi \times (g_\pi + g_E + g_o)}
+\end{equation}
+
+\begin{equation}
+    Z_o = \frac{1}{g_\pi + g_E + g_o + g_m}
+\end{equation}
+
+\vspace{0.3in}
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [V], [dB] and [$\Omega$]} \\ \hline
+    \input{osoctave_tab}
+  \end{tabular}
+  \caption{Values of interest computed}
+  \label{tab:op1f}
+\end{table}
+
+As we can see, the values go according to the expected, therefore, we have an unitary gain and an output impedance much lower than the speaker 8 $\Omega$.
+
+

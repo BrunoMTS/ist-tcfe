@@ -35,19 +35,26 @@ Co emit2 out 1m
 RL out 0 8
 
 .op
+
+
+
 .end
+
 
 .control
 
+
+
+
 *makes plots in color
-set hcopypscolor=0
-set color0=white
-set color1=black
-set color2=red
-set color3=blue
-set color4=violet
-set color5=rgb:3/8/0
-set color6=rgb:4/0/0
+*set hcopypscolor=0
+*set color0=white
+*set color1=white
+*set color2=red
+*set color3=blue
+*set color4=violet
+*set color5=rgb:3/8/0
+*set color6=rgb:4/0/0
 
 
 print all
@@ -65,8 +72,8 @@ ac dec 10 10 100MEG
 
 
 meas ac vdboutmax max vdb(out) from=10 to=100MEG
-meas ac freq_atl when vdb(out)=3.444713e+01
-meas ac freq_atu when vdb(out)=3.444713e+01 CROSS=LAST
+meas ac freql when vdb(out)=3.444713e+01
+meas ac frequ when vdb(out)=3.444713e+01 CROSS=LAST
 
 
 echo "********************************************"
@@ -74,10 +81,10 @@ echo  "SIM VALUES"
 echo "********************************************"
 echo  "SIMVALUES_TAB"
 print vdboutmax
-print freq_atl
-print freq_atu
-print freq_atu - freq_atl
-print vdboutmax * ( freq_atu - freq_atl ) / freq_atl
+print freql
+print frequ
+print frequ - freql
+print vdboutmax * ( frequ - freql ) / freql
 echo  "SIMVALUES_END"
 
 plot vdb(coll)

@@ -1,17 +1,22 @@
+# ------------------------------------------------------------
+# type "make" command in the Linux terminal create report.pdf
+#
+# type "make clean" to delete all generated files
+# ------------------------------------------------------------
 
-
-all: ngspice.log
-	$(eval NGSFIGS=$(shell grep _FIG $< | sed 's/_FIG//g' | sed ':a;N;$!ba;s/\n/ /g'))
-	$(eval NGSFIGPS=$(addsuffix .ps, $(NGSFIGS)))
-	$(foreach i, $(NGSFIGPS), ps2pdf $i;)
-	$(eval NGSTABS=$(shell grep _TAB $< | sed 's/_TAB//g' | sed ':a;N;$!ba;s/\n/ /g'))
-	$(foreach i, $(NGSTABS), sed -n '/^$i_TAB/,/^$i_END/{p;/^$i_END/q}' $< | grep -v $i_TAB | grep -v $i_END | grep -v '#' | sed 's/\=/\&/g' | sed 's/$$/\\\\ \\hline/g' > $i_tab.tex;)
-
-ngspice.log: ../sim/t4.net
-	ngspice -b $< -o $@
+all:
+	make -C mat
+	make -C sim1
+	make -C sim2
+	make -C doc
+	cp doc/report.pdf .
 
 clean:
-	@rm -f ngspice.log *.tex *.pdf *.ps *~
+	make -C mat clean
+	make -C sim1 clean
+	make -C sim2 clean
+	make -C doc clean
 
 .PHONY: all clean
+
 
