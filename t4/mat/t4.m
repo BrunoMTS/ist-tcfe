@@ -110,13 +110,15 @@ ZO2
 printf("osoctave_END\n");
 
 printf("gzoctave_TAB\n");
-AV=20*log(-AV1)
+AVdB=20*log(-AV1)
+AV=-AV1
 ZI=ZI1
 ZO=ZO2
 printf("gzoctave_END\n");
 
 printf("gzspice_TAB\n");
-AV=37.44713
+AVdB=37.44713
+AV=10^(AVdB/20)
 ZI=274.3123
 ZO=1.061204
 printf("gzspice_END\n");
@@ -128,7 +130,7 @@ TRANSISTORS=0.2
 printf("cost_END\n");
 
 printf("fm_TAB\n");
-GAIN=37.44713
+GAIN=AV
 FREQL=1.480389e+01
 FREQU=1.981780e+06
 BANDWITH=1.981765e+06
