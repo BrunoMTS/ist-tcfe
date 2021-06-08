@@ -94,8 +94,17 @@ ac dec 10 10 100MEG
 *output impedance in ohm
 
 plot abs(v(out_1)/Vzout#branch)
+hardcopy z_o.ps abs(v(out_1)/Vzout#branch)
+echo z_o_FIG
 let z_out = abs(v(out_1)/Vzout#branch)
-meas ac z_output FIND z_out at=1000
+meas ac zoutput FIND z_out at=1000
+
+echo "********************************************"
+echo  "Zoutput"
+echo "********************************************"
+echo  "zoutput_TAB"
+print zoutput
+echo  "zoutput_END"
 
 .endc 
 

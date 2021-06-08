@@ -89,11 +89,11 @@ set color6=rgb:4/0/0
 ac dec 10 10 100MEG
 plot vdb(out)
 plot vp(out)
-hardcopy vo1db.ps vdb(out)
-echo vo1db_FIG
+hardcopy opampdb.ps vdb(out)
+echo opampdb_FIG
 set units=degrees
-hardcopy vo1f.ps vp(out)
-echo vo1f_FIG
+hardcopy opampp.ps vp(out)
+echo opampp_FIG
 
 
 

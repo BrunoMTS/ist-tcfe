@@ -77,11 +77,25 @@ vo1db_FIG
 
 The file "vo1f.ps" may be printed on a postscript printer.
 vo1f_FIG
-central_gain        =  9.046204e+01
-central_gaindb      =  3.912933e+01
-Error: bad variable name 3dbfall
-feqlow              =  1.433971e+01
-feqhigh             =  6.646336e+05
+centralgain         =  9.763641e+01
+centralgaindb       =  3.979224e+01
+freqlow             =  9.456061e+01
+freqhigh            =  1.056765e+04
+********************************************
+GAIN VALUES
+********************************************
+GAINVALUES_TAB
+centralgain = 9.763641e+01
+centralgaindb = 3.979224e+01
+GAINVALUES_END
+********************************************
+FREQ VALUES
+********************************************
+FREQVALUES_TAB
+freqlow = 9.456061e+01
+freqhigh = 1.056765e+04
+centralfreq = 9.996417e+02
+FREQVALUES_END
 Reducing trtol to 1 for xspice 'A' devices
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
@@ -386,7 +400,7 @@ No. of Data Rows : 1
  Capacitor: Fixed capacitor
      device                    c1               c.x1.c2               c.x1.c1
       model                     C                     C                     C
-capacitance               3.3e-07                 3e-11             8.661e-12
+capacitance               6.6e-07                 3e-11             8.661e-12
       dtemp                     0                     0                     0
      bv_max                 1e+99                 1e+99                 1e+99
           i                     0                     0                     0
@@ -553,16 +567,16 @@ capacitance               3.3e-07                 3e-11             8.661e-12
                            -1e+07          
 
 
-Total analysis time (seconds) = 0.111
+Total analysis time (seconds) = 0.092
 
-Total elapsed time (seconds) = 0.259 
+Total elapsed time (seconds) = 0.117 
 
 Total DRAM available = 3935.898 MB.
-DRAM currently available =  398.168 MB.
-Total ngspice program size =   23.570 MB.
-Resident set size =   11.543 MB.
-Shared ngspice pages =    8.121 MB.
+DRAM currently available =  224.340 MB.
+Total ngspice program size =   23.586 MB.
+Resident set size =   11.715 MB.
+Shared ngspice pages =    8.285 MB.
 Text (code) pages =    5.070 MB.
 Stack = 0 bytes.
-Library pages =    3.828 MB.
+Library pages =    3.844 MB.
 

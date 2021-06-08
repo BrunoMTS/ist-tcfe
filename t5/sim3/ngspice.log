@@ -65,7 +65,16 @@ Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 No. of Data Rows : 71
 ERROR: (internal)  This operation is not defined for display type printf.
 Can't open viewport for graphics.
-z_output            =  5.038865e+00
+
+The file "z_o.ps" may be printed on a postscript printer.
+z_o_FIG
+zoutput             =  5.038865e+00
+********************************************
+Zoutput
+********************************************
+zoutput_TAB
+zoutput = 5.038865e+00
+zoutput_END
 Reducing trtol to 1 for xspice 'A' devices
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
@@ -553,16 +562,16 @@ capacitance               3.3e-07                 3e-11             8.661e-12
                            -1e+07          
 
 
-Total analysis time (seconds) = 0.178
+Total analysis time (seconds) = 0.077
 
-Total elapsed time (seconds) = 0.242 
+Total elapsed time (seconds) = 0.100 
 
 Total DRAM available = 3935.898 MB.
-DRAM currently available =  401.246 MB.
-Total ngspice program size =   23.594 MB.
-Resident set size =   11.484 MB.
-Shared ngspice pages =    8.047 MB.
+DRAM currently available =  321.438 MB.
+Total ngspice program size =   23.582 MB.
+Resident set size =   11.652 MB.
+Shared ngspice pages =    7.965 MB.
 Text (code) pages =    5.070 MB.
 Stack = 0 bytes.
-Library pages =    3.852 MB.
+Library pages =    3.840 MB.
 

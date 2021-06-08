@@ -23,11 +23,11 @@ Can't open viewport for graphics.
 ERROR: (internal)  This operation is not defined for display type printf.
 Can't open viewport for graphics.
 
-The file "vo1db.ps" may be printed on a postscript printer.
-vo1db_FIG
+The file "opampdb.ps" may be printed on a postscript printer.
+opampdb_FIG
 
-The file "vo1f.ps" may be printed on a postscript printer.
-vo1f_FIG
+The file "opampp.ps" may be printed on a postscript printer.
+opampp_FIG
 Reducing trtol to 1 for xspice 'A' devices
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
@@ -498,16 +498,16 @@ capacitance               3.3e-07                 3e-11             8.661e-12
                            -1e+07          
 
 
-Total analysis time (seconds) = 0.02
+Total analysis time (seconds) = 0.011
 
-Total elapsed time (seconds) = 0.118 
+Total elapsed time (seconds) = 0.023 
 
 Total DRAM available = 3935.898 MB.
-DRAM currently available =  401.973 MB.
-Total ngspice program size =   22.945 MB.
-Resident set size =   11.242 MB.
-Shared ngspice pages =    8.336 MB.
+DRAM currently available =  233.801 MB.
+Total ngspice program size =   22.949 MB.
+Resident set size =   11.199 MB.
+Shared ngspice pages =    8.281 MB.
 Text (code) pages =    5.070 MB.
 Stack = 0 bytes.
-Library pages =    3.203 MB.
+Library pages =    3.207 MB.
 

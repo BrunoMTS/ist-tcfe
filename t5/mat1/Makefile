@@ -6,7 +6,7 @@ all: octave_nos.log
 	$(foreach i, $(NGSTABS), sed -n '/^$i_TAB/,/^$i_END/{p;/^$i_END/q}' $< | grep -v $i_TAB | grep -v $i_END | grep -v '#' | sed 's/\=/\&/g' | sed 's/$$/\\\\ \\hline/g' > $i_tab.tex;)
 
 
-octave_nos.log: t5_1.m 
+octave_nos.log: t51.m 
 	octave $<  >$@
 	
 

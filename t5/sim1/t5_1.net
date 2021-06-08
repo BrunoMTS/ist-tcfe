@@ -56,7 +56,7 @@ Vin in 0 0 ac 1.0 sin(0 10m 1k)
 
 X1 ninv_in inv_in vcc vee out uA741
 
-C1 in ninv_in 330n
+C1 in ninv_in 660n
 
 R1 0 ninv_in 1k
 R3 0 inv_in 1k
@@ -100,12 +100,30 @@ set units=degrees
 hardcopy vo1f.ps vp(out)
 echo vo1f_FIG
 
-meas ac central_gain FIND vm(out) at=1000
-meas ac central_gaindb FIND vdb(out) at=1000 
-let 3dbfall = central_gaindb-3
-meas ac feqlow WHEN vm(out)=3dbfall from=10 to=100MEG RISE=1
-meas ac feqhigh WHEN vdb(out)=3dbfall from=10 to=100MEG FALL=1
+meas ac centralgain FIND vm(out) at=1000
+meas ac centralgaindb FIND vdb(out) at=1000 
+meas ac freqlow WHEN vm(out)=3.679224e+01 from=10 to=100MEG RISE=1
+meas ac freqhigh WHEN vdb(out)=3.679224e+01 from=10 to=100MEG FALL=1
  
+echo "********************************************"
+echo  "GAIN VALUES"
+echo "********************************************"
+echo  "GAINVALUES_TAB"
+print centralgain
+print centralgaindb
+echo  "GAINVALUES_END"
+
+
+let centralfreq = sqrt((freqlow)*(freqhigh))
+
+echo "********************************************"
+echo  "FREQ VALUES"
+echo "********************************************"
+echo  "FREQVALUES_TAB"
+print freqlow
+print freqhigh
+print centralfreq
+echo  "FREQVALUES_END"
 
 .endc 
 

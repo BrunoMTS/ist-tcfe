@@ -95,9 +95,19 @@ tran 1e-5 1e-2
 ac dec 10 10 100MEG
 
 *input impedance in Mohm
-plot abs(v(ninv_in)-v(inv_in)/Vzin#branch/10e6)
-let z_in = (v(ninv_in)-v(inv_in)/Vzin#branch/10e6)
-meas ac z_input FIND z_in at=1000
+plot abs((v(ninv_in)-v(inv_in))/Vzin#branch/10e0)
+hardcopy z_i.ps abs((v(ninv_in)-v(inv_in))/Vzin#branch/10e0)
+echo z_i_FIG
+let z_in = ((v(ninv_in)-v(inv_in))/Vzin#branch/10e6)
+meas ac zinput FIND z_in at=1000
+
+echo "********************************************"
+echo  "Zin"
+echo "********************************************"
+echo  "zin_TAB"
+print zinput
+echo  "zin_END"
+
 
 .endc 
 

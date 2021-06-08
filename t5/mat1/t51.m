@@ -24,6 +24,8 @@ Tf_abs(i)=20*log10(Tf(i));
 Tf_fas(i)=arg(Tf(i))*180/pi;
 endfor
 
+
+
 b1 = figure ();
 semilogx(f, Tf_abs,"-;Gain;");
 xlabel ("Frequency [rad/s]");
@@ -37,3 +39,28 @@ xlabel ("Frequency [rad/s]");
 ylabel ("Phase [rad/s]");
 grid on;
 print (b2, "b2.eps", "-depsc");
+
+
+printf("Cost_TAB\n");
+OPAMP=13322.58
+CIRCUIT=102.33
+TOTAL=OPAMP+CIRCUIT
+printf("Cost_END\n");
+
+printf("fm_TAB\n");
+GAIN=9.763641e+01
+GAINDEV=abs(100-GAIN)
+CENTRALFREQ=9.996417e+02
+CENTRALFREQDEV=abs(1000-CENTRALFREQ)
+COST=TOTAL
+FM=1/(COST*(GAINDEV+CENTRALFREQDEV+10^(-6)))
+printf("fm_END\n");
+
+printf("comp_TAB\n");
+R1=1
+R2=1
+R3=100
+C1=220
+C2=220
+C3=220
+printf("comp_END\n");
