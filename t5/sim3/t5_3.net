@@ -56,7 +56,7 @@ Vzout out out_1 0
 
 X1 ninv_in inv_in vcc vee out_1 uA741
 
-C1 0 ninv_in 330n
+C1 0 ninv_in 1.5un
 
 R1 0 ninv_in 1k
 R3 0 inv_in 1k

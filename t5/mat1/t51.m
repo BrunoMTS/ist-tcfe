@@ -5,7 +5,7 @@ f = logspace(1, 8, 200);
 
 
 
-C1=330*10^-9;
+C1=1.5*10^-6;
 R1=1000;
 R2=1000;
 R3=100000;
@@ -43,14 +43,14 @@ print (b2, "b2.eps", "-depsc");
 
 printf("Cost_TAB\n");
 OPAMP=13322.58
-CIRCUIT=102.33
+CIRCUIT=105
 TOTAL=OPAMP+CIRCUIT
 printf("Cost_END\n");
 
 printf("fm_TAB\n");
-GAIN=9.763641e+01
+GAIN=9.987576e+01
 GAINDEV=abs(100-GAIN)
-CENTRALFREQ=9.996417e+02
+CENTRALFREQ=1.030792e+03
 CENTRALFREQDEV=abs(1000-CENTRALFREQ)
 COST=TOTAL
 FM=1/(COST*(GAINDEV+CENTRALFREQDEV+10^(-6)))
@@ -60,7 +60,7 @@ printf("comp_TAB\n");
 R1=1
 R2=1
 R3=100
-C1=220
-C2=220
-C3=220
+C1=1
+C2=1
+C3=1
 printf("comp_END\n");

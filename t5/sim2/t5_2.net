@@ -59,7 +59,7 @@ Vzin in_teste ninv_in 0
 
 X1 ninv_in inv_in vcc vee out uA741
 
-C1 in in_teste 330n
+C1 in in_teste 1.5u
 
 R1 0 20 1k
 R3 0 inv_in 1k

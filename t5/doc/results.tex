@@ -1,0 +1,41 @@
+\section{Figure of merit}
+\label{sec:results}
+
+The final objective was to obtain a figure of merit as high as possible. 
+In this section, we present the final result, after we performed all the analysis
+The merit figures is given by:
+\begin{equation}
+    M = \frac{1}{Cost (VoltageGainDeviation + CentralFrequencyDeviation + 10^{-6})}  
+\end{equation}
+
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [Hz] } \\ \hline
+    \input{Cost_tab}
+  \end{tabular}
+  \caption{Values of Gain}
+  \label{tab:r}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|l|r|}
+    \hline    
+    {\bf Name} & {\bf Value [Hz] } \\ \hline
+    \input{fm_tab}
+  \end{tabular}
+  \caption{Values of Gain}
+  \label{tab:r}
+\end{table}
+
+\paragraph{}
+
+Finally, we obtained the important values to calculate the Merit Figure, which we present in the table above. The values used were those of the simulation, since they represent a more accurate approximation of reality.
+
+The Figure of Merit has a very low value. The main reason for this is because the cost of the OPAMP is quite high, in fact, is two orders of magnitude higher than the cost of the rest of the circuit.
+
+Even so, the gain and centre frequency values achieved were very close to the intended values. 
