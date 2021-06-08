@@ -1,0 +1,584 @@
+
+Circuit: *-----------------------------------------------------------------------------
+
+false = 0.000000e+00
+true = 1.000000e+00
+boltz = 1.380649e-23
+c = 2.997925e+08
+e = 2.718282e+00
+echarge = 1.602177e-19
+i = 0.000000e+00,1.000000e+00
+kelvin = -2.73150e+02
+no = 0.000000e+00
+pi = 3.141593e+00
+planck = 6.626070e-34
+yes = 1.000000e+00
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vcc                                          5
+vee                                         -5
+in                                           0
+in_teste                             -0.341795
+ninv_in                              -0.341795
+x1.11                                   4.9207
+x1.12                                        5
+x1.6                                   1.49435
+x1.7                                  -4.61634
+out                                   -4.61326
+x1.53                                        4
+x1.54                                       -4
+x1.90                               -0.0615247
+x1.91                                       40
+x1.92                                      -40
+x1.99                                        0
+x1.10                                -0.685302
+inv_in                              -0.0458337
+x1.13                                -0.657565
+x1.14                                -0.685301
+x1.9                                         0
+x1.8                                  -4.61634
+20                                           0
+h.x1.hlim#branch                   1.23054e-13
+v.x1.vlim#branch                  -6.15247e-05
+v.x1.vln#branch                    -3.9942e-11
+v.x1.vlp#branch                   -4.00623e-11
+v.x1.ve#branch                    -1.58504e-05
+v.x1.vc#branch                     8.61406e-12
+v.x1.vb#branch                     1.49435e-05
+vzin#branch                        3.23117e-27
+vin#branch                                   0
+vee#branch                          0.00054997
+vcc#branch                        -0.000565609
+a$poly$e.x1.egnd#branch_1_0        6.14727e-05
+
+
+No. of Data Rows : 1008
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 71
+ERROR: (internal)  This operation is not defined for display type printf.
+Can't open viewport for graphics.
+z_input             =  9.995839e-01
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+No. of Data Rows : 1
+	Node                                  Voltage
+	----                                  -------
+	----	-------
+	V(20)                            0.000000e+00
+	x1.8                             -4.61634e+00
+	x1.9                             0.000000e+00
+	x1.14                            -6.85301e-01
+	x1.13                            -6.57565e-01
+	inv_in                           -4.58337e-02
+	x1.10                            -6.85302e-01
+	x1.99                            0.000000e+00
+	x1.92                            -4.00000e+01
+	x1.91                            4.000000e+01
+	x1.90                            -6.15247e-02
+	x1.54                            -4.00000e+00
+	x1.53                            4.000000e+00
+	out                              -4.61326e+00
+	x1.7                             -4.61634e+00
+	x1.6                             1.494346e+00
+	x1.12                            4.999997e+00
+	x1.11                            4.920700e+00
+	ninv_in                          -3.41795e-01
+	in_teste                         -3.41795e-01
+	in                               0.000000e+00
+	vee                              -5.00000e+00
+	vcc                              5.000000e+00
+
+	Source	Current
+	------	-------
+
+	@rl[i]                           -4.61326e-31
+	@r4[i]                           4.567429e-05
+	@r3[i]                           4.583373e-05
+	@r1[i]                           0.000000e+00
+	@c1[i]                           0.000000e+00
+	@r.x1.rp[i]                      5.506608e-04
+	@r.x1.ro2[i]                     -4.61634e-02
+	@r.x1.ro1[i]                     -6.15247e-05
+	@r.x1.ree[i]                     -5.19562e-08
+	@r.x1.re2[i]                     4.740077e-10
+	@r.x1.re1[i]                     1.510757e-05
+	@r.x1.rc2[i]                     4.790077e-10
+	@r.x1.rc1[i]                     1.494813e-05
+	@r.x1.r2[i]                      1.494346e-05
+	@q.x1.q2[is]                     4.999997e-12
+	@q.x1.q2[ib]                     4.060760e-19
+	@q.x1.q2[ie]                     -4.79008e-10
+	@q.x1.q2[ic]                     4.740077e-10
+	@q.x1.q1[is]                     4.920700e-12
+	@q.x1.q1[ib]                     1.594423e-07
+	@q.x1.q1[ie]                     -1.51076e-05
+	@q.x1.q1[ic]                     1.494813e-05
+	@g.x1.gcm[i]                     -4.08509e-09
+	@g.x1.ga[i]                      -1.49475e-05
+	@d.x1.dp[id]                     -1.00008e-11
+	@d.x1.dln[id]                    -3.99393e-11
+	@d.x1.dlp[id]                    -4.00623e-11
+	@d.x1.de[id]                     1.585038e-05
+	@d.x1.dc[id]                     -8.61406e-12
+	@c.x1.c2[i]                      0.000000e+00
+	@c.x1.c1[i]                      0.000000e+00
+	a$poly$e.x1.egnd#branch_1_0      6.147272e-05
+	vcc#branch                       -5.65609e-04
+	vee#branch                       5.499704e-04
+	vin#branch                       0.000000e+00
+	vzin#branch                      3.231174e-27
+	v.x1.vb#branch                   1.494346e-05
+	v.x1.vc#branch                   8.614063e-12
+	v.x1.ve#branch                   -1.58504e-05
+	v.x1.vlp#branch                  -4.00623e-11
+	v.x1.vln#branch                  -3.99420e-11
+	v.x1.vlim#branch                 -6.15247e-05
+	h.x1.hlim#branch                 1.230543e-13
+
+ BJT models (Bipolar Junction Transistor)
+      model                 x1:qx
+
+       type                   npn
+       tnom                    27
+         is                 8e-16
+         bf                 93.75
+         nf                     1
+        vaf                     0
+        ikf                     0
+        ise                     0
+         ne                   1.5
+         br                     1
+         nr                     1
+        var                     0
+        ikr                     0
+        isc                     0
+         nc                     2
+         rb                     0
+        irb                     0
+        rbm                     0
+         re                     0
+         rc                     0
+        cje                     0
+        vje                  0.75
+        mje                  0.33
+         tf                     0
+        xtf                     0
+        vtf                     0
+        itf                     0
+        ptf                     0
+        cjc                     0
+        vjc                  0.75
+        mjc                  0.33
+       xcjc                     1
+         tr                     0
+        cjs                     0
+        vjs                  0.75
+        mjs                     0
+        xtb                     0
+         eg                  1.11
+        xti                     3
+         fc                   0.5
+         kf                     0
+         af                     0
+        iss                     0
+         ns                     1
+       tlev                     0
+      tlevc                     0
+       tbf1                     0
+       tbf2                     0
+       tbr1                     0
+       tbr2                     0
+      tikf1                     0
+      tikf2                     0
+      tikr1                     0
+      tikr2                     0
+      tirb1                     0
+      tirb2                     0
+       tnc1                     0
+       tnc2                     0
+       tne1                     0
+       tne2                     0
+       tnf1                     0
+       tnf2                     0
+       tnr1                     0
+       tnr2                     0
+       trb1                     0
+       trb2                     0
+       trc1                     0
+       trc2                     0
+       tre1                     0
+       tre2                     0
+       trm1                     0
+       trm2                     0
+      tvaf1                     0
+      tvaf2                     0
+      tvar1                     0
+      tvar2                     0
+        ctc                     0
+        cte                     0
+        cts                     0
+       tvjc                     0
+       tvje                     0
+       tvjs                     0
+      titf1                     0
+      titf2                     0
+       ttf1                     0
+       ttf2                     0
+       ttr1                     0
+       ttr2                     0
+      tmje1                     0
+      tmje2                     0
+      tmjc1                     0
+      tmjc2                     0
+      tmjs1                     0
+      tmjs2                     0
+       tns1                     0
+       tns2                     0
+        nkf                   0.5
+       tis1                     0
+       tis2                     0
+      tise1                     0
+      tise2                     0
+      tisc1                     0
+      tisc2                     0
+    vbe_max                 1e+99
+    vbc_max                 1e+99
+    vce_max                 1e+99
+
+ Capacitor models (Fixed capacitor)
+      model                     C
+
+        cap                     0
+         cj                     0
+       cjsw                     0
+       defw                 1e-05
+       defl                     0
+     narrow                     0
+      short                     0
+        del                     0
+        tc1                     0
+        tc2                     0
+         di                     0
+      thick                     0
+     bv_max                 1e+99
+
+ Diode models (Junction Diode model)
+      model                 x1:dx
+
+      level                     1
+         is                 8e-16
+        jsw                     0
+         rs                     1
+        trs                     0
+       trs2                     0
+          n                     1
+         ns                     1
+         tt                     0
+       ttt1                     0
+       ttt2                     0
+        cjo                     0
+         vj                     1
+          m                   0.5
+        tm1                     0
+        tm2                     0
+        cjp                     0
+        php                     1
+       mjsw                  0.33
+        ikf                     0
+        ikr                     0
+        nbv                     1
+       area                     1
+         pj                     0
+       tlev                     0
+      tlevc                     0
+         eg                  1.11
+        xti                     3
+        cta                     0
+        ctp                     0
+        tpb                     0
+       tphp                     0
+       jtun                     0
+     jtunsw                     0
+       ntun                    30
+     xtitun                     3
+        keg                     1
+         kf                     0
+         af                     1
+         fc                   0.5
+        fcs                   0.5
+         bv                     0
+        ibv                 0.001
+        tcv                     0
+     fv_max                 1e+99
+     bv_max                 1e+99
+        isr                 1e-14
+         nr                     1
+
+ Resistor models (Simple linear resistor)
+      model                     R
+
+        rsh                     0
+     narrow                     0
+      short                     0
+        tc1                     0
+        tc2                     0
+        tce                     0
+       defw                 1e-05
+          l                 1e-05
+         kf                     0
+         af                     0
+          r                     0
+     bv_max                 1e+99
+         lf                     1
+         wf                     1
+         ef                     1
+
+ spice2poly models (2G6 compatible polynomial controlled source)
+      model        a$poly$f.x1.fb      a$poly$e.x1.egnd
+
+       coef                     0                     0
+                        1.061e+07                   0.5
+                           -1e+07                   0.5
+                            1e+07          
+                            1e+07          
+                           -1e+07          
+
+ BJT: Bipolar Junction Transistor
+     device               q.x1.q2               q.x1.q1
+      model                 x1:qx                 x1:qx
+         ic           4.74008e-10           1.49481e-05
+         ib           4.06076e-19           1.59442e-07
+         ie          -4.79008e-10          -1.51076e-05
+        vbe              0.343506              0.611731
+        vbc              -5.34179              -4.96653
+         gm           1.81197e-08            0.00057793
+        gpi           1.94277e-10           6.16459e-06
+        gmu                 1e-12                 1e-12
+         gx                     0                     0
+         go           6.85609e-23           9.17511e-23
+        cpi                     0                     0
+        cmu                     0                     0
+        cbx                     0                     0
+       csub                     0                     0
+
+ Capacitor: Fixed capacitor
+     device                    c1               c.x1.c2               c.x1.c1
+      model                     C                     C                     C
+capacitance               3.3e-07                 3e-11             8.661e-12
+      dtemp                     0                     0                     0
+     bv_max                 1e+99                 1e+99                 1e+99
+          i                     0                     0                     0
+          p                     0                     0                    -0
+
+ CCVS: Linear current controlled current source
+     device             h.x1.hlim
+          i           1.23054e-13
+          v            -0.0615247
+          p          -7.57088e-15
+
+ Diode: Junction Diode model
+     device               d.x1.dp              d.x1.dln              d.x1.dlp
+      model                 x1:dx                 x1:dx                 x1:dx
+         vd                   -10              -39.9385              -40.0615
+         id          -1.00008e-11          -3.99393e-11          -4.00623e-11
+         gd                 1e-12                 1e-12                 1e-12
+         cd                     0                     0                     0
+
+ Diode: Junction Diode model
+     device               d.x1.de               d.x1.dc
+      model                 x1:dx                 x1:dx
+         vd              0.613247              -8.61326
+         id           1.58504e-05          -8.61406e-12
+         gd           0.000612814                 1e-12
+         cd                     0                     0
+
+ Isource: Independent current source
+     device              i.x1.iee
+         dc             1.516e-05
+          m                     1
+      acmag                     0
+      pulse         -
+        sin         -
+        exp         -
+        pwl         -
+       sffm         -
+         am         -
+    trnoise         -
+   trrandom         -
+          v               -4.3147
+          p           6.54108e-05
+    current             1.516e-05
+
+ Resistor: Simple linear resistor
+     device                    rl                    r4                    r3
+      model                     R                     R                     R
+ resistance                 1e+31                100000                  1000
+         ac                 1e+31                100000                  1000
+      dtemp                     0                     0                     0
+     bv_max                 1e+99                 1e+99                 1e+99
+      noisy                     1                     1                     1
+          i          -4.61326e-31           4.56743e-05           4.58337e-05
+          p           2.12822e-30           0.000208614           2.10073e-06
+
+ Resistor: Simple linear resistor
+     device                    r1               r.x1.rp              r.x1.ro2
+      model                     R                     R                     R
+ resistance                  1000                 18160                   100
+         ac                  1000                 18160                   100
+      dtemp                     0                     0                     0
+     bv_max                 1e+99                 1e+99                 1e+99
+      noisy                     1                     1                     1
+          i                     0           0.000550661            -0.0461634
+          p                     0            0.00550661              0.213106
+
+ Resistor: Simple linear resistor
+     device              r.x1.ro1              r.x1.ree              r.x1.re2
+      model                     R                     R                     R
+ resistance                    50             1.319e+07                  1836
+         ac                    50             1.319e+07                  1836
+      dtemp                     0                     0                     0
+     bv_max                 1e+99                 1e+99                 1e+99
+      noisy                     1                     1                     1
+          i          -6.15247e-05          -5.19562e-08           4.74008e-10
+          p           1.89264e-07           3.56057e-08           4.12519e-16
+
+ Resistor: Simple linear resistor
+     device              r.x1.re1              r.x1.rc2              r.x1.rc1
+      model                     R                     R                     R
+ resistance                  1836                  5305                  5305
+         ac                  1836                  5305                  5305
+      dtemp                     0                     0                     0
+     bv_max                 1e+99                 1e+99                 1e+99
+      noisy                     1                     1                     1
+          i           1.51076e-05           4.79008e-10           1.49481e-05
+          p           4.19046e-07           1.21722e-15           1.18538e-06
+
+ Resistor: Simple linear resistor
+     device               r.x1.r2
+      model                     R
+ resistance                100000
+         ac                100000
+      dtemp                     0
+     bv_max                 1e+99
+      noisy                     1
+          i           1.49435e-05
+          p           2.23307e-05
+
+ VCCS: Voltage controlled current source
+     device              g.x1.gcm               g.x1.ga
+          m                     0                     0
+          i          -4.08509e-09          -1.49475e-05
+          v              -1.49435               1.49435
+          p           6.10453e-09          -2.23368e-05
+
+ Vsource: Independent voltage source
+     device              v.x1.vln              v.x1.vlp             v.x1.vlim
+         dc                    40                    40                     0
+      acmag                     0                     0                     0
+      pulse         -         -         -
+        sin         -         -         -
+        exp         -         -         -
+        pwl         -         -         -
+       sffm         -         -         -
+         am         -         -         -
+    trnoise         -         -         -
+   trrandom         -         -         -
+          i           -3.9942e-11          -4.00623e-11          -6.15247e-05
+          p           1.59768e-09           1.60249e-09                     0
+
+ Vsource: Independent voltage source
+     device               v.x1.ve               v.x1.vc               v.x1.vb
+         dc                     1                     1                     0
+      acmag                     0                     0                     0
+      pulse         -         -         -
+        sin         -         -         -
+        exp         -         -         -
+        pwl         -         -         -
+       sffm         -         -         -
+         am         -         -         -
+    trnoise         -         -         -
+   trrandom         -         -         -
+          i          -1.58504e-05           8.61406e-12           1.49435e-05
+          p           1.58504e-05          -8.61406e-12                    -0
+
+ Vsource: Independent voltage source
+     device                  vzin                   vin                   vee
+         dc                     0                     0                    -5
+      acmag                     0                     1                     0
+      pulse         -                     0         -
+                                       0.01          
+                                       1000          
+        sin         -                     0         -
+                                       0.01          
+                                       1000          
+        exp         -                     0         -
+                                       0.01          
+                                       1000          
+        pwl         -                     0         -
+                                       0.01          
+                                       1000          
+       sffm         -                     0         -
+                                       0.01          
+                                       1000          
+         am         -                     0         -
+                                       0.01          
+                                       1000          
+    trnoise         -                     0         -
+                                       0.01          
+                                       1000          
+   trrandom         -                     0         -
+                                       0.01          
+                                       1000          
+          i           3.23117e-27                     0            0.00054997
+          p                    -0                    -0            0.00274985
+
+ Vsource: Independent voltage source
+     device                   vcc
+         dc                     5
+      acmag                     0
+      pulse         -
+        sin         -
+        exp         -
+        pwl         -
+       sffm         -
+         am         -
+    trnoise         -
+   trrandom         -
+          i          -0.000565609
+          p            0.00282805
+
+ spice2poly: 2G6 compatible polynomial controlled source
+     device        a$poly$f.x1.fb      a$poly$e.x1.egnd
+      model        a$poly$f.x1.fb      a$poly$e.x1.egnd
+    acgains             1.061e+07                   0.5
+                           -1e+07                   0.5
+                            1e+07          
+                            1e+07          
+                           -1e+07          
+
+
+Total analysis time (seconds) = 0.145
+
+Total elapsed time (seconds) = 0.169 
+
+Total DRAM available = 3935.898 MB.
+DRAM currently available =  401.246 MB.
+Total ngspice program size =   23.715 MB.
+Resident set size =   11.766 MB.
+Shared ngspice pages =    8.074 MB.
+Text (code) pages =    5.070 MB.
+Stack = 0 bytes.
+Library pages =    3.973 MB.
+

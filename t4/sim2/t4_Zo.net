@@ -22,6 +22,7 @@ Vout out 0 0 ac 1.0 sin(0 10m 1k)
 
 .control
 
+<<<<<<< HEAD:t4/sim2/t4_Zo.net
 *makes plots in color
 *set hcopypscolor=0
 *set color0=white
@@ -34,6 +35,8 @@ Vout out 0 0 ac 1.0 sin(0 10m 1k)
 
 
 print all
+=======
+>>>>>>> 31f3d34ee65ee29d194f0b14957a4dc922b4092f:t4/t4.net
 
 * time analysis
 tran 1e-5 1e-2
@@ -53,6 +56,14 @@ hardcopy zo.ps abs(v(out)/Vout#branch/(-1000))
 print v(out)[40]/Vout#branch[40]/(-1000)
 echo zo_FIG
 
+<<<<<<< HEAD:t4/sim2/t4_Zo.net
+=======
+*input impedance in kohm
+*print all
+
+plot abs(v(in2)/vin#branch/(-1000))
+print v(in2)[40]/vin#branch[40]/(-1000)
+>>>>>>> 31f3d34ee65ee29d194f0b14957a4dc922b4092f:t4/t4.net
 
 
 .endc 
